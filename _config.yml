@@ -1,0 +1,27 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Dan McNair
+tagline:          'Front-end Developer'
+description:      'Front-end Development Lead at <a href="http://www.cubicflow.com">Cubicflow</a>.'
+url:              http://danmcnair.cubicflow.com
+baseurl:          /
+
+author:
+  name:           'Mark Otto'
+  url:            https://twitter.com/mdo
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/poole/hyde
+
+gems: [jekyll-paginate]
