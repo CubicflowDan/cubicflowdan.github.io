@@ -1,0 +1,80 @@
+---
+layout: default
+title: Home
+---
+
+<div class="posts">
+
+  <div class="post">
+    <h1 class="post-title">
+      Front-end developer with a passion for beautiful user interfaces.
+    </h1>
+
+  </div>
+
+
+
+
+  <h1 style="margin-bottom: 1.3em; font-size: 1.1em; font-weight: normal; color: #666">Recent Work:</h1>
+  {% for post in site.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      {{ post.title }}
+    </h1>
+
+    <span class="post-date">{{ post.description }}</span>
+
+    {{ post.content }}
+
+    {% if post.website %}
+      <a class="external-link" href="{{post.website}}" target="_blank">
+        <i class="fa fa-chevron-right"></i> Visit Website
+      </a>
+    {% endif %}
+
+
+    {% if post.case_study %}
+      <a class="external-link" href="{{post.case_study}}" target="_blank">
+        <i class="fa fa-file-text-o"></i> View the Case Study
+      </a>
+    {% endif %}
+
+
+    {% if post.screenshots %}
+
+      <div class="screenshots">
+        <h3>App Screenshots</h3>
+
+        <div class="screenshots__thumbs">
+        {% for screenshot in post.screenshots %}
+          <a href="{{screenshot.fullsize}}">
+            <img src="{{screenshot.thumbnail}}">
+          </a>
+        {% endfor %}
+        </div>
+
+      </div>
+
+    {% endif %}
+
+
+  </div>
+  {% endfor %}
+</div>
+
+<!-- <div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div> -->
